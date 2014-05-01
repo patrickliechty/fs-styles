@@ -1,6 +1,3 @@
-@import '../helpers/_variables'
-@import '../helpers/_mixins'
-
 /*------------------------------------*\
   $CONTENTS
 \*------------------------------------*/
@@ -108,15 +105,15 @@ select {
   box-shadow: 0 3px 0 rgba(0,0,0,0.1);
 
   // new buttons should override text, background, and border colors for default, hover, active, and disabled:hover states
-  color: $white;
+  color: #fff;
   background-color: $button-blue-light;
   background-image: linear-gradient($button-blue-light, $button-blue-dark);
   &:hover {
-    color: $white;
+    color: #fff;
     background: $button-blue-light;
   }
   &:active {
-    color: $white;
+    color: #fff;
     background-image: linear-gradient($button-blue-dark, $button-blue-light);
   }
   &:disabled,
@@ -155,7 +152,7 @@ select {
 /*------------------------------------*\
   $ALERTS
 \*------------------------------------*/
-.alert
+.alert {
   background: $ok-green-light;
   color: $ok-green-dark;
   border-color: $ok-green-border;
@@ -181,11 +178,11 @@ select {
 \*------------------------------------*/
 .badge {
   color: #000;
-  background: $fff;
+  background: #fff;
   font-size: $small-size;
 
   &.dark {
-    color: $white;
+    color: #fff;
     background: $heading-grey;
   }
 }
