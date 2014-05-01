@@ -1,0 +1,128 @@
+/***********************************************************************/
+/* VARIABLES
+/***********************************************************************/
+
+/*
+ * COLORS
+ */
+$black = #000000;
+$white = #ffffff;
+
+$link-blue = #0051c4;
+
+$male-blue = #3d8ff7;
+$female-pink = #e23f7b;
+
+// fonts
+$heading-grey = #4d4d4a;
+$body-grey = #333331;
+$label-grey = #666662;
+
+// buttons
+$button-grey-light = #e6e7e8;
+$button-grey-dark = #bcbec0;
+$button-grey-border = #d5d5d5;
+
+$button-blue-light = #358fe8;
+$button-blue-dark = #003e99;
+$button-blue-border = #2a65a0;
+
+// inputs
+$disabled-grey-light = #f0f0f0;
+$disabled-grey-text = #999999;
+
+$input-selected-border = #333331;
+
+$select-border = #cccccc;
+
+// alerts
+$ok-green-light = #f0fee9;
+$ok-green-dark = #375700;
+$ok-green-border = #73bc00;
+
+$warning-yellow-light = #fff6bf;
+$warning-yellow-dark = #8c5800;
+$warning-yellow-border = #ffd324;
+
+$error-red-light = #fff2f2;
+$error-red-dark = #6e0009;
+$error-red-border = #9b211e;
+
+/*
+ * FONTS
+ */
+$small-size = 14px;
+$small-lineHieght = 20px;
+
+$medium-size = 16px;
+$medium-lineHieght = 24px;
+
+$large-size = 21px;
+$large-lineHeight = 24px;
+
+$x-large-size = 28px;
+$x-large-lineHeight = 32px;
+
+$xx-large-size = 36px;
+$xx-large-lineHeight = 39px;
+
+$xxx-large-size = 48px;
+$xxx-large-lineHeight = 50px;
+
+
+/***********************************************************************/
+/* MIXINS / FUNCTIONS
+/***********************************************************************/
+
+/*
+ * VENDOR PREFIXES
+ */
+box-shadow() {
+  -webkit-box-shadow: arguments;
+          box-shadow: arguments;
+}
+
+box-sizing() {
+  -webkit-box-sizing: arguments;
+     -moz-box-sizing: arguments;
+          box-sizing: arguments;
+}
+
+user-select() {
+  -webkit-user-select: arguments;
+   -khtml-user-select: arguments;
+     -moz-user-select: arguments;
+      -ms-user-select: arguments;
+          user-select: arguments;
+}
+
+background-image() {
+  // add linear gradient vendor prefixes
+  if match('-gradient\(', '' + arguments) {
+    background-image: s('-webkit-%s', arguments);
+    background-image: s('-moz-%s', arguments);
+  }
+
+  background-image: arguments;
+}
+
+/*
+ * UTILITIES
+ */
+// taken from the nib.styl library
+overflow()
+  if arguments[0] == ellipsis
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  else
+    overflow: arguments
+
+clearfix()
+  &:before
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
