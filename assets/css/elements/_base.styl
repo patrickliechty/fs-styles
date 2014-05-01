@@ -1,0 +1,46 @@
+@import '../helpers/_variables'
+@import '../helpers/_mixins'
+
+/*------------------------------------*\
+  $CONTENTS
+\*------------------------------------*/
+/**
+ * FORMS......Form styles
+ */
+
+
+
+
+
+/*------------------------------------*\
+  $FORMS
+\*------------------------------------*/
+textarea,
+input[type=text] {
+  border-radius: 4px;
+  height: 22px;
+  padding: 4px 6px;
+
+  &:focus {
+    border: 1px solid;
+    outline: 0;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-width: 50%;
+  min-height: 75px;
+}
+
+select {
+  border: 1px solid;
+  padding: 4px 6px;
+  margin: 0;
+  height: 32px;
+
+  &:focus {
+    border: 1px solid;
+    outline: none;
+  }
+}

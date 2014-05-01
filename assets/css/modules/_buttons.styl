@@ -1,0 +1,39 @@
+/*------------------------------------*\
+  $BUTTONS
+\*------------------------------------*/
+/*
+ * BUTTONS
+ * <button class="button">Button (button.button)</button>
+ * <a href="#" class="button">Button (a.button)</a>
+ */
+.button {
+  // styles that all buttons use
+  position: relative;
+  display: inline-block;
+  border: none;
+  padding: 10px 20px;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: 5px;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-appearance: none;
+
+  &:hover {
+    text-decoration: none;
+    background-image: none;
+  }
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
