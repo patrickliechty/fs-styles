@@ -1,0 +1,188 @@
+/*------------------------------------*\
+  $CONTENTS
+\*------------------------------------*/
+/**
+ * BODY.......Body styles
+ * FORMS......Form styles
+ * BUTTONS....Button styles
+ * ALERTS.....Alert styles
+ */
+
+
+
+
+
+/*------------------------------------*\
+  $BODY
+\*------------------------------------*/
+body {
+  color: $body-grey;
+  font-family: "ProximaNova", Verdana, sans-serif;
+  font-size: $medium-size;
+  line-height: $medium-lineHieght;
+}
+
+h1, h2, h3, h4 {
+  font-family: "museo", serif;
+}
+h1 {
+  color: $heading-grey;
+  font-size: $xxx-large-size;
+  line-height: $xxx-large-lineHeight;
+}
+h2 {
+  color: $heading-grey;
+  font-size: $xx-large-size;
+  line-height: $xx-large-lineHeight;
+}
+h3 {
+  font-size: $x-large-size;
+  line-height: $x-large-lineHeight;
+}
+h4 {
+  font-size: $large-size;
+  line-height: $large-lineHeight;
+}
+
+a,
+a:hover,
+a:active {
+  color: $link-blue;
+}
+
+
+
+
+
+/*------------------------------------*\
+  $FORMS
+\*------------------------------------*/
+label {
+  color: $label-grey;
+  font-size: $small-size;
+  line-height: $small-lineHieght;
+}
+
+textarea,
+input[type=text] {
+  font-size: $medium-size;
+  line-height: $medium-lineHieght;
+  color: $body-grey;
+  box-shadow: inset 0 3px 0 rgba(0,0,0,0.05);
+
+  &:focus {
+    border-color: $input-selected-border;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,0.05);
+  }
+  &:disabled,
+  &.disabled {
+    color: $disabled-grey-text;
+    background: $disabled-grey-light;
+  }
+}
+
+select {
+  border-color: $select-border;
+  font-size: $small-size;
+  line-height: $small-lineHieght;
+  color: $body-grey;
+
+  &:focus {
+    border-color: #333331;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  $BUTTONS
+\*------------------------------------*/
+.button {
+  font-size: $medium-size;
+  text-shadow: 0px -1px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+
+  // new buttons should override text, background, and border colors for default, hover, active, and disabled:hover states
+  color: #fff;
+  background-color: $button-blue-light;
+  background-image: linear-gradient($button-blue-light, $button-blue-dark);
+  &:hover {
+    color: #fff;
+    background: $button-blue-light;
+  }
+  &:active {
+    color: #fff;
+    background-image: linear-gradient($button-blue-dark, $button-blue-light);
+  }
+  &:disabled,
+  &.disabled {
+    // new buttons must set the disabled hover state to match the default state of the button
+    &:hover {
+      background-image: linear-gradient($button-blue-light, $button-blue-dark);
+    }
+  }
+
+  // secondary submit button
+  &.secondary {
+    color: $body-grey;
+    background-color: $button-grey-light;
+    background-image: linear-gradient($button-grey-light, $button-grey-dark);
+    text-shadow: 0px 1px 0 rgba(255,255,255,0.5);
+    &:hover {
+      background: $button-grey-light;
+    }
+    &:active {
+      background-image: linear-gradient($button-grey-dark, $button-grey-light);
+    }
+    &:disabled,
+    &.disabled {
+      &:hover {
+        background-image: linear-gradient($button-grey-light, $button-grey-dark);
+      }
+    }
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  $ALERTS
+\*------------------------------------*/
+.alert {
+  background: $ok-green-light;
+  color: $ok-green-dark;
+  border-color: $ok-green-border;
+
+  &.warning {
+    background: $warning-yellow-light;
+    color: $warning-yellow-dark;
+    border-color: $warning-yellow-border;
+  }
+  &.error {
+    background: $error-red-light;
+    color: $error-red-dark;
+    border-color: $error-red-border;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  $BADGES
+\*------------------------------------*/
+.badge {
+  color: #000;
+  background: #fff;
+  font-size: $small-size;
+
+  &.dark {
+    color: #fff;
+    background: $heading-grey;
+  }
+}
