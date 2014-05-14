@@ -4,7 +4,7 @@ Stylus files used by FamilySearch.org.
 
 # Folder Organization
 To help organize a large CSS code base, we have split the files into different folders. Each file is then compiled into `familysearch-styles.styl` which is what is used on the site.
-*see [Architecture SASS Project](http://www.sitepoint.com/architecture-sass-project/) and [SMACSS Categorizing](http://smacss.com/book/categorizing) for more details*
+*See [Architecture SASS Project](http://www.sitepoint.com/architecture-sass-project/) and [SMACSS Categorizing](http://smacss.com/book/categorizing) for more details*
 
 Folder   | Contents
 ---------|---------
@@ -16,7 +16,7 @@ Themes   | Theme specific styles (colors, typography, etc.) applied to elements 
 
 # File Organization
 A little effort goes a long way. Please take the time to organize your CSS file so that others may quickly find what they are looking for. Divide your code into meaningful sections that denote what the rules are affecting.
-*see [CSS Guidelines](https://github.com/csswizardry/CSS-Guidelines) for more details*
+*See [CSS Guidelines](https://github.com/csswizardry/CSS-Guidelines) for more details*
 
 ## Recommended Guidelines
 1. Table of contents at the top of the stylesheet denoting sections
@@ -44,3 +44,7 @@ When naming files, `_filename` denotes that the file is only a partial file and 
 
 ## Class Names
 To be determined. Possible considerations are [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) and [SMACSS](http://smacss.com/).
+
+## Variables
+When naming variables, start the variable name with the most generic term and end with the most specific term. This allows auto complete to grab all variables that also belong to the generic category. For example, a variable for a blue border should be named `$color-border-blue`.
+*See [Sass Variable Architecture](http://peteschuster.com/2014/02/sass-variable-architecture/), [Naming SASS Variables Modularly](http://webdesign.tutsplus.com/articles/quick-tip-name-your-sass-variables-modularly--webdesign-13364), and [SASS Color Variables](http://sachagreif.com/sass-color-variables/) for more details*

@@ -1,15 +1,4 @@
 /*------------------------------------*\
-  $CONTENTS
-\*------------------------------------*/
-/**
- * MIXINS.......Mixins should only key off property names if they produce vendor prefixes
- * FUNCTIONS....Functions should always be called using `()`
- */
-
-
-
-
-/*------------------------------------*\
   $MIXINS
 \*------------------------------------*/
 box-shadow() {
@@ -39,26 +28,3 @@ background-image() {
 
   background-image: arguments;
 }
-
-
-
-
-
-/*------------------------------------*\
-  $FUNCTIONS
-\*------------------------------------*/
-overflow()
-  if arguments[0] == ellipsis
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  else
-    overflow: arguments
-
-clearfix()
-  &:before
-  &:after
-    content: ""
-    display: table
-  &:after
-    clear: both

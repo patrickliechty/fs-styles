@@ -16,7 +16,7 @@
   $BODY
 \*------------------------------------*/
 body {
-  color: $body-grey;
+  color: $color-text;
   font-family: "ProximaNova", Verdana, sans-serif;
   font-size: $medium-size;
   line-height: $medium-lineHieght;
@@ -26,12 +26,12 @@ h1, h2, h3, h4 {
   font-family: "museo", serif;
 }
 h1 {
-  color: $heading-grey;
+  color: $color-headings;
   font-size: $xxx-large-size;
   line-height: $xxx-large-lineHeight;
 }
 h2 {
-  color: $heading-grey;
+  color: $color-headings;
   font-size: $xx-large-size;
   line-height: $xx-large-lineHeight;
 }
@@ -47,7 +47,7 @@ h4 {
 a,
 a:hover,
 a:active {
-  color: $link-blue;
+  color: $color-link;
 }
 
 
@@ -58,7 +58,7 @@ a:active {
   $FORMS
 \*------------------------------------*/
 label {
-  color: $label-grey;
+  color: $color-label;
   font-size: $small-size;
   line-height: $small-lineHieght;
 }
@@ -67,28 +67,28 @@ textarea,
 input[type=text] {
   font-size: $medium-size;
   line-height: $medium-lineHieght;
-  color: $body-grey;
+  color: $color-text;
   box-shadow: inset 0 3px 0 rgba(0,0,0,0.05);
 
   &:focus {
-    border-color: $input-selected-border;
+    border-color: $color-border-input-selected;
     box-shadow: inset 0 3px 0 rgba(0,0,0,0.05);
   }
   &:disabled,
   &.disabled {
-    color: $disabled-grey-text;
-    background: $disabled-grey-light;
+    color: $color-text-input-disabled;
+    background: $color-background-input-disabled;
   }
 }
 
 select {
-  border-color: $select-border;
+  border-color: $color-border-select;
   font-size: $small-size;
   line-height: $small-lineHieght;
-  color: $body-grey;
+  color: $color-text;
 
   &:focus {
-    border-color: #333331;
+    border-color: $color-text;
   }
 }
 
@@ -106,40 +106,40 @@ select {
 
   // new buttons should override text, background, and border colors for default, hover, active, and disabled:hover states
   color: #fff;
-  background-color: $button-blue-light;
-  background-image: linear-gradient($button-blue-light, $button-blue-dark);
+  background-color: $color-background-gradient-start-button-primary;
+  background-image: linear-gradient($color-background-gradient-start-button-primary, $color-background-gradient-stop-button-primary);
   &:hover {
     color: #fff;
-    background: $button-blue-light;
+    background: $color-background-gradient-start-button-primary;
   }
   &:active {
     color: #fff;
-    background-image: linear-gradient($button-blue-dark, $button-blue-light);
+    background-image: linear-gradient($color-background-gradient-stop-button-primary, $color-background-gradient-start-button-primary);
   }
   &:disabled,
   &.disabled {
     // new buttons must set the disabled hover state to match the default state of the button
     &:hover {
-      background-image: linear-gradient($button-blue-light, $button-blue-dark);
+      background-image: linear-gradient($color-background-gradient-start-button-primary, $button-blue-dark);
     }
   }
 
   // secondary submit button
   &.secondary {
-    color: $body-grey;
-    background-color: $button-grey-light;
-    background-image: linear-gradient($button-grey-light, $button-grey-dark);
+    color: $color-text;
+    background-color: $color-background-gradient-start-button-secondary;
+    background-image: linear-gradient($color-background-gradient-start-button-secondary, $color-background-gradient-stop-button-secondary);
     text-shadow: 0px 1px 0 rgba(255,255,255,0.5);
     &:hover {
-      background: $button-grey-light;
+      background: $color-background-gradient-start-button-secondary;
     }
     &:active {
-      background-image: linear-gradient($button-grey-dark, $button-grey-light);
+      background-image: linear-gradient($color-background-gradient-stop-button-secondary, $color-background-gradient-start-button-secondary);
     }
     &:disabled,
     &.disabled {
       &:hover {
-        background-image: linear-gradient($button-grey-light, $button-grey-dark);
+        background-image: linear-gradient($color-background-gradient-start-button-secondary, $color-background-gradient-stop-button-secondary);
       }
     }
   }
@@ -153,19 +153,19 @@ select {
   $ALERTS
 \*------------------------------------*/
 .alert {
-  background: $ok-green-light;
-  color: $ok-green-dark;
-  border-color: $ok-green-border;
+  background: $color-background-alert-success;
+  color: $color-text-alert-success;
+  border-color: $color-border-alert-success;
 
   &.warning {
-    background: $warning-yellow-light;
-    color: $warning-yellow-dark;
-    border-color: $warning-yellow-border;
+    background: $color-background-alert-warning;
+    color: $color-text-alert-warning;
+    border-color: $color-border-alert-warning;
   }
   &.error {
-    background: $error-red-light;
-    color: $error-red-dark;
-    border-color: $error-red-border;
+    background: $color-background-alert-error;
+    color: $color-text-alert-error;
+    border-color: $color-border-alert-error;
   }
 }
 
@@ -183,6 +183,6 @@ select {
 
   &.dark {
     color: #fff;
-    background: $heading-grey;
+    background: $color-headings;
   }
 }
