@@ -99,7 +99,7 @@ select {
 /*------------------------------------*\
   $BUTTONS
 \*------------------------------------*/
-.button {
+.fs-button {
   font-size: $medium-size;
   text-shadow: 0px -1px 0 rgba(0,0,0,0.2);
   box-shadow: 0 3px 0 rgba(0,0,0,0.1);
@@ -125,15 +125,17 @@ select {
   }
 
   // secondary submit button
-  &.secondary {
+  &--secondary {
     color: $color-text;
     background-color: $color-background-gradient-start-button-secondary;
     background-image: linear-gradient($color-background-gradient-start-button-secondary, $color-background-gradient-stop-button-secondary);
     text-shadow: 0px 1px 0 rgba(255,255,255,0.5);
     &:hover {
+      color: $color-text;
       background: $color-background-gradient-start-button-secondary;
     }
     &:active {
+      color: $color-text;
       background-image: linear-gradient($color-background-gradient-stop-button-secondary, $color-background-gradient-start-button-secondary);
     }
     &:disabled,
@@ -152,17 +154,18 @@ select {
 /*------------------------------------*\
   $ALERTS
 \*------------------------------------*/
-.alert {
+.fs-alert {
   background: $color-background-alert-success;
   color: $color-text-alert-success;
   border-color: $color-border-alert-success;
 
-  &.warning {
+  &--warning {
     background: $color-background-alert-warning;
     color: $color-text-alert-warning;
     border-color: $color-border-alert-warning;
   }
-  &.error {
+
+  &--error {
     background: $color-background-alert-error;
     color: $color-text-alert-error;
     border-color: $color-border-alert-error;
@@ -176,12 +179,12 @@ select {
 /*------------------------------------*\
   $BADGES
 \*------------------------------------*/
-.badge {
+.fs-badge {
   color: #000;
   background: #fff;
   font-size: $small-size;
 
-  &.dark {
+  &--dark {
     color: #fff;
     background: $color-headings;
   }
