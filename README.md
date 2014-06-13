@@ -43,7 +43,7 @@ A little effort goes a long way. Please take the time to organize your CSS file 
 When naming files, `_filename` denotes that the file is only a partial file and should not be compiled into a CSS file. These files are used by other files to create a fully complied CSS file. Examples include `_mixins` which is a list of mixins and has no selectors that would produce a CSS file.
 
 ## Class Names
-When naming classes, preface all classes with `fs-` and use [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) syntax. By doing so, we completely nulify class name collisions problems. Writing BEM is really easy when using stylus since you can use the `&` symbol to use the class name for each element.
+When naming classes, preface all classes with `fs-` and use [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) syntax. By doing so, we completely nulify class name collision problems. Writing BEM is really easy when using stylus since you can use the `&` symbol to use the class name for each element.
 
 ## Variables
 When naming variables, start the variable name with the most generic term and end with the most specific term. This allows auto complete to grab all variables that also belong to the generic category. For example, a variable for a blue border should be named `$color-border-blue`.
